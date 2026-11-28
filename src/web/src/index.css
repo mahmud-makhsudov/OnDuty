@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+/* OnDuty design tokens. Use as Tailwind classes, e.g. bg-ink text-paper font-display. */
+@theme {
+  --color-ink: #0d0d0d;
+  --color-surface: #161616;
+  --color-raised: #212121;
+  --color-line: #262626;
+  --color-paper: #faf9f5;
+  --color-muted: #a3a29c;
+  --color-signal: #4ade80;
+  --color-warn: #e8c468;
+
+  --font-display: 'Anton', Impact, sans-serif;
+  --font-sans: 'Inter Tight', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-ink font-sans text-paper antialiased;
+}
