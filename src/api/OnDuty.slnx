@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="OnDuty.Api/OnDuty.Api.csproj" />
+    <Project Path="OnDuty.Core/OnDuty.Core.csproj" />
+    <Project Path="OnDuty.Infrastructure/OnDuty.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="OnDuty.Api.Tests/OnDuty.Api.Tests.csproj" />
+    <Project Path="OnDuty.Core.Tests/OnDuty.Core.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="../../global.json" />
+  </Folder>
+</Solution>
