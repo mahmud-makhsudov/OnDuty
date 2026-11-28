@@ -1,0 +1,32 @@
+# Local development services. Start with: docker compose up -d
+# The credentials here are for your own machine only.
+name: onduty
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: onduty-postgres
+    environment:
+      POSTGRES_DB: onduty
+      POSTGRES_USER: onduty
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-onduty_dev}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U onduty -d onduty"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  mailpit:
+    # Fake email inbox: the API sends mail to SMTP port 1025, you read it at http://localhost:8025
+    image: axllent/mailpit:latest
+    container_name: onduty-mailpit
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+volumes:
+  postgres-data:
