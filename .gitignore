@@ -1,0 +1,35 @@
+# ---------- .NET / Visual Studio ----------
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.rsuser
+*.userprefs
+TestResults/
+*.trx
+*.coverage
+coverage*.json
+coverage*.xml
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# ---------- Node / web ----------
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+
+# ---------- Build output and deployment ----------
+src/api/OnDuty.Api/wwwroot/
+artifacts/
+publish/
+infra/*.local.bicepparam
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db

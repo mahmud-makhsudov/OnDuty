@@ -1,0 +1,21 @@
+# Store text files with LF in the repo; each machine checks them out with its native line endings.
+* text=auto
+
+# Files used on Linux (CI, containers) keep LF.
+*.sh text eol=lf
+Dockerfile text eol=lf
+
+# Windows-only files keep CRLF.
+*.sln text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
