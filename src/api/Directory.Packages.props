@@ -1,0 +1,21 @@
+<Project>
+  <!-- Central package management: every NuGet version lives here; .csproj files list packages without versions. -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <!-- Also lets this file set versions of packages pulled in indirectly (used below for security fixes). -->
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+  <ItemGroup Label="API">
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
+  </ItemGroup>
+  <ItemGroup Label="Security pins (indirect dependencies)">
+    <!-- Microsoft.AspNetCore.OpenApi 10.0.0 pulls in Microsoft.OpenApi 2.0.0, flagged by GHSA-v5pm-xwqc-g5wc. Fixed in 2.7.5. -->
+    <PackageVersion Include="Microsoft.OpenApi" Version="2.7.5" />
+  </ItemGroup>
+  <ItemGroup Label="Testing">
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+  </ItemGroup>
+</Project>

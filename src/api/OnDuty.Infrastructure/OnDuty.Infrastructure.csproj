@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnDuty.Core\OnDuty.Core.csproj" />
+  </ItemGroup>
+
+</Project>

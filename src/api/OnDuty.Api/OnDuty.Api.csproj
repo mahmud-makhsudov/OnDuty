@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnDuty.Core\OnDuty.Core.csproj" />
+    <ProjectReference Include="..\OnDuty.Infrastructure\OnDuty.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
