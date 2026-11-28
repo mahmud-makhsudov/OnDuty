@@ -36,3 +36,7 @@ npm run dev
 | PostgreSQL | `localhost:5432`, database `onduty`, user `onduty` |
 
 Stop the services with `docker compose down` (add `-v` to also delete the local database).
+
+## Architecture decisions
+
+Key technical decisions are recorded in [docs/adr](docs/adr).
